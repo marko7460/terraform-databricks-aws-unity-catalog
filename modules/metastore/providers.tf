@@ -10,7 +10,6 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
   default_tags {
     tags = var.tags
   }
@@ -18,6 +17,4 @@ provider "aws" {
 
 provider "databricks" {
   alias         = "mws"
-  //host          = "https://accounts.cloud.databricks.com"
-  //account_id    = var.databricks_account_id
 }

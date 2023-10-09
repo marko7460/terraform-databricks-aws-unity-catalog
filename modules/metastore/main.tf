@@ -49,7 +49,7 @@ resource "aws_s3_bucket_public_access_block" "unity_catalog" {
 resource "databricks_metastore" "this" {
   name          = var.metastore_name
   region        = var.region
-  storage_root  = "s3://${var.bucket}/${var.metastore_name}"
+  storage_root  = "s3://${var.bucket}/${var.prefix}"
   force_destroy = true
 }
 
