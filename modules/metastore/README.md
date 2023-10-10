@@ -20,11 +20,12 @@ To use this module you have to define the following environment variables:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| databricks\_account\_id | The Databricks account ID | `string` | n/a | yes |
 | aws\_account\_id | The AWS account ID | `string` | n/a | yes |
 | bucket | Name of the S3 bucket to store the metastore data | `string` | n/a | yes |
 | create\_bucket | Whether to create the S3 bucket to store the metastore data. Set this to false if you have already created the bucket. | `bool` | `true` | no |
+| databricks\_account\_id | The Databricks account ID | `string` | n/a | yes |
 | metastore\_name | The name of the metastore | `string` | n/a | yes |
+| owner | Username/groupname/service\_principle\_application\_id of the metastore owner. | `string` | n/a | yes |
 | prefix | Prefix for the S3 bucket to store the metastore data | `string` | `"metastore"` | no |
 | region | The AWS region | `string` | n/a | yes |
 | tags | Tags to apply to the resources created | `map(string)` | `{}` | no |

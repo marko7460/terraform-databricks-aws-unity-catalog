@@ -35,6 +35,12 @@ variable "prefix" {
   default     = "metastore"
 }
 
+variable "owner" {
+  description = "Username/groupname/service_principle_application_id of the metastore owner."
+  type        = string
+  default     = null
+}
+
 variable "tags" {
   description = "Tags to apply to the resources created"
   type        = map(string)

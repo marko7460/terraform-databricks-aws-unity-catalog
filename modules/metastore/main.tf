@@ -51,6 +51,7 @@ resource "databricks_metastore" "this" {
   region        = var.region
   storage_root  = "s3://${var.bucket}/${var.prefix}"
   force_destroy = true
+  owner         = var.owner
 }
 
 // Metastore Data Access
@@ -65,3 +66,4 @@ resource "databricks_metastore_data_access" "this" {
     databricks_metastore.this, aws_iam_role.unity_catalog_role, time_sleep.wait_30_seconds
   ]
 }
+
