@@ -8,7 +8,7 @@ resource "databricks_schema" "this" {
   catalog_name  = var.catalog_name
 }
 
-resource "databricks_grants" "metastore" {
+resource "databricks_grants" "schema" {
   count   = length(var.grants) > 0 ? 1 : 0
   catalog = databricks_schema.this.id
   dynamic "grant" {
