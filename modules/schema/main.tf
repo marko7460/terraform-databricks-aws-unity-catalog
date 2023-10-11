@@ -1,11 +1,11 @@
 resource "databricks_schema" "this" {
-  name           = var.name
-  comment        = var.comment
-  properties     = var.properties
-  force_destroy  = var.force_destroy
-  owner          = var.owner
-  storage_root   = var.storage_root
-  catalog_name   = var.catalog_name
+  name          = var.name
+  comment       = var.comment
+  properties    = var.properties
+  force_destroy = var.force_destroy
+  owner         = var.owner
+  storage_root  = var.storage_root
+  catalog_name  = var.catalog_name
 }
 
 resource "databricks_grants" "metastore" {

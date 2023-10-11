@@ -1,9 +1,9 @@
 output "catalog_id" {
-  description = "The ID of the catalog."
-  value       = databricks_catalog.this.id
+  description = "The ID of the schema."
+  value       = databricks_schema.this.id
 }
 
 output "catalog" {
-  description = "The catalog"
-  value       = databricks_catalog.this
+  description = "The schema"
+  value       = databricks_schema.this
 }
