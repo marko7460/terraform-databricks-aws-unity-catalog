@@ -27,7 +27,7 @@ To use this module you have to define the following environment variables:
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| catalog | The schema |
-| catalog\_id | The ID of the schema. |
+| Name       | Description |
+|------------|-------------|
+| schema     | The schema |
+| schema\_id | The ID of the schema. |

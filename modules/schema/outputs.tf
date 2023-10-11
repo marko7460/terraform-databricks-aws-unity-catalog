@@ -1,9 +1,9 @@
-output "catalog_id" {
+output "schema_id" {
   description = "The ID of the schema."
   value       = databricks_schema.this.id
 }
 
-output "catalog" {
+output "schema" {
   description = "The schema"
   value       = databricks_schema.this
 }
