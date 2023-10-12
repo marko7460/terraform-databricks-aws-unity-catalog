@@ -9,8 +9,8 @@ resource "databricks_schema" "this" {
 }
 
 resource "databricks_grants" "schema" {
-  count   = length(var.grants) > 0 ? 1 : 0
-  catalog = databricks_schema.this.id
+  count  = length(var.grants) > 0 ? 1 : 0
+  schema = databricks_schema.this.id
   dynamic "grant" {
     for_each = { for g in var.grants : g.principal => g }
     content {
