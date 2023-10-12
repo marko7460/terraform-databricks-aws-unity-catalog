@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "external" {
 
 resource "aws_s3_bucket_versioning" "external_versioning" {
   count  = var.create_bucket ? 1 : 0
-  bucket = aws_s3_bucket.external.id
+  bucket = aws_s3_bucket.external[0].id
   versioning_configuration {
     status = "Disabled"
   }
@@ -23,7 +23,7 @@ resource "aws_s3_bucket_versioning" "external_versioning" {
 
 resource "aws_s3_bucket_public_access_block" "external" {
   count              = var.create_bucket ? 1 : 0
-  bucket             = aws_s3_bucket.external.id
+  bucket             = aws_s3_bucket.external[0].id
   ignore_public_acls = true
   depends_on         = [aws_s3_bucket.external]
 }
