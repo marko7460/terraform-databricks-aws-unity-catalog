@@ -25,6 +25,6 @@ resource "databricks_grants" "metastore" {
 
 resource "databricks_catalog_workspace_binding" "this" {
   for_each     = toset(var.attach_workspace_ids)
-  catalog_id   = databricks_catalog.this.id
+  catalog_name = databricks_catalog.this.id
   workspace_id = each.value
 }
