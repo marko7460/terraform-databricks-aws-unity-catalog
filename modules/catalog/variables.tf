@@ -76,3 +76,9 @@ variable "grants" {
   }))
   default = []
 }
+
+variable "attach_workspace_ids" {
+  description = "List of workspace ids to attach to the catalog. Use when isolation_mode is ISOLATED"
+  type        = list(string)
+  default     = []
+}

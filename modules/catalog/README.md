@@ -16,6 +16,7 @@ To use this module you have to define the following environment variables:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
+| attach\_workspace\_ids | List of workspace ids to attach to the catalog. Use when isolation\_mode is ISOLATED | `list(string)` | `[]` | no |
 | comment | Comment | `string` | `"This catalog is managed by terraform"` | no |
 | force\_destroy | Delete catalog regardless of its contents | `bool` | `false` | no |
 | grants | List of grants to create | <pre>list(object({<br>    principal  = string<br>    privileges = list(string)<br>  }))<br></pre> | `[]` | no |
